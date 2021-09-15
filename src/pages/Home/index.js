@@ -11,7 +11,7 @@ export default function Home() {
 
     async function loadFilmes(){
         const response = await api.get('r-api/?api=filmes')
-        console.log(response.data);
+        // console.log(response.data);
         setFilmes(response.data);
     }
 
@@ -27,7 +27,7 @@ export default function Home() {
             <article key={filme.id}>
                 <strong> {filme.nome} </strong>
                 <img src={filme.foto} alt={filme.nome} />
-                <Link to="/">Acessar</Link>
+                <Link to={`/filme/${filme.id}`}>Acessar</Link>
             </article> 
           )
         })}
