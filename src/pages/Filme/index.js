@@ -1,19 +1,27 @@
 
 import { useEffect, useState } from 'react';
 import './filme-info.css';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 export default function Filme(){
   const { id } = useParams();
+  const history = useHistory();
+
   const [filme, setFilme] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
 
     async function loadFilme(){
-      const response = await api.get(`r-api/?api=filmes/${id}`);
-      // console.log(response.data);
+      const response = await api.get(`r-api/?api=filmes/${id}`);      
+
+      if (response.data.length === 0) {
+        //Não obteve nenhum resultado da API
+        history.replace('/');
+        return;
+      }
+
       setFilme(response.data);
       setLoading(false);
     }
@@ -26,7 +34,7 @@ export default function Filme(){
   if(loading){
     return(
     <div className="filme-info">
-      <h1>Carregando seu filme...</h1>
+      <h1>Carregando filme...</h1>
     </div>
     )
   }
