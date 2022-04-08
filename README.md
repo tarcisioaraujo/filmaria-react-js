@@ -18,11 +18,11 @@ Aplicação Filmaria que permite ao usuário favoritar filmes e assitir os respe
 
 <p align="center">
 	<kbd>
-		<img alt="Navegação Filmaria" title="#NavegacaoFilmaria" width="800" height="600" style="border-radius: 5px" src="./assets/navegacao_filmaria.gif">
+		<img alt="Navegação Filmaria" title="#NavegacaoFilmaria" width="800" height="373" style="border-radius: 5px" src="./assets/navegacao_filmaria.gif">
 	</kbd>
 	<br/><br/>
 	<kbd>
-		<img alt="Gerenciando Favoritos" title="#GerenciandoFavoritos" width="800" height="600" style="border-radius: 5px" src="./assets/gerenciando_favoritos.gif">
+		<img alt="Gerenciando Favoritos" title="#GerenciandoFavoritos" width="800" height="373" style="border-radius: 5px" src="./assets/gerenciando_favoritos.gif">
 	</kbd>		
 </p>
 
